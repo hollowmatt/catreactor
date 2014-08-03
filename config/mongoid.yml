@@ -1,0 +1,24 @@
+consistency: :strong
+
+development:
+  sessions:
+    default:
+      hosts:
+        - localhost:27017
+      database: catreactor_development
+
+test:
+  sessions:
+    default:
+      hosts:
+        - localhost:27017
+      database: catreactor_test
+
+# set these environment variables on your prod server
+production:
+  host: <%= ENV['MONGOID_HOST'] %>
+  port: <%= ENV['MONGOID_PORT'] %>
+  username: <%= ENV['MONGOID_USERNAME'] %>
+  password: <%= ENV['MONGOID_PASSWORD'] %>
+  database: <%= ENV['MONGOID_DATABASE'] %>
+
